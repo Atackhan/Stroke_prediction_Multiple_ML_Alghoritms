@@ -1,56 +1,56 @@
 # 🏡 Costa Rican Household Poverty Level Prediction
 
-Bu proje, **Costa Rica'daki hanelerin sosyoekonomik durumunu sınıflandırmak** amacıyla makine öğrenimi modelleri geliştirmeyi hedeflemektedir. Veri analizi, veri temizleme, özellik mühendisliği ve modelleme adımlarını içerir.
+This project aims to develop machine learning models to **classify the socioeconomic status of households in Costa Rica**. It includes data analysis, data cleaning, feature engineering, and modeling.
 
 ---
 
-## 📁 Veri Seti
+## 📁 Dataset
 
-Veri seti, [Kaggle Costa Rican Household Poverty Level Prediction](https://www.kaggle.com/c/costa-rican-household-poverty-prediction) yarışmasından alınmıştır.
+The dataset was obtained from the [Kaggle Costa Rican Household Poverty Level Prediction](https://www.kaggle.com/c/costa-rican-household-poverty-prediction) competition.
 
-**Dosyalar:**
-- `train.csv` (Eğitim verisi)
-- `codebook.csv` (Veri açıklamaları içeren sözlük dosyası)
+**Files:**
+- `train.csv` (Training dataset)
+- `codebook.csv` (Codebook with descriptions of each variable)
 
 ---
 
-## 🔍 Kullanılan Kütüphaneler
+## 🔍 Libraries Used
 - `pandas`
 - `numpy`
 - `matplotlib`
 - `scikit-learn`
 
-Kurulum için:
+Installation:
 ```
 pip install pandas numpy matplotlib scikit-learn
 ```
 
 ---
 
-## 🛠️ Proje Adımları
+## 🛠️ Project Workflow
 
-### 1. Veri Yükleme ve Temel Analiz
-- Verinin yüklenmesi ve genel bilgilerinin incelenmesi.
+### 1. Data Loading and Initial Analysis
+- Loading and inspecting the dataset.
 
-### 2. Veri Temizleme ve Ön İşleme
-- Eksik değerlerin tespiti ve median değerlerle doldurulması.
-- Kategorik verilerin sayısal değerlere dönüştürülmesi.
+### 2. Data Cleaning and Preprocessing
+- Identification and imputation of missing values using median values.
+- Conversion of categorical variables into numerical format.
 
-### 3. Özellik Mühendisliği (Feature Engineering)
-Yeni özelliklerin oluşturulması:
-- Kişi başına düşen kira miktarları
-- Yatak odası ve oda başına düşen kişi sayısı
-- Elektronik cihaz sayıları
-- Demografik oranlar (çocuk, yetişkin ve yaşlı oranları vb.)
+### 3. Feature Engineering
+Creation of new meaningful features such as:
+- Rent per adult and per person
+- Number of electronic appliances
+- People per room and bedroom
+- Demographic ratios (children, adults, elderly, etc.)
 
-### 4. Makine Öğrenmesi Modelleri
-- Eğitim ve test verilerinin oluşturulması.
-- Kullanılan modeller:
+### 4. Machine Learning Modeling
+- Splitting data into training and testing sets.
+- Models used:
   - **Support Vector Machine (SVM)**
   - **Stochastic Gradient Descent (SGDClassifier)**
 
-### 5. Model Değerlendirmesi
-Modellerin performansları aşağıdaki metriklerle ölçülmüştür:
+### 5. Model Evaluation
+Models were evaluated using the following metrics:
 - Accuracy
 - Precision
 - Recall
@@ -58,36 +58,36 @@ Modellerin performansları aşağıdaki metriklerle ölçülmüştür:
 
 ---
 
-## 📊 Model Sonuçları
+## 📊 Model Results
 
 | Model             | Accuracy | Precision | Recall | F1 Score |
 |-------------------|----------|-----------|--------|----------|
 | **SVM**           | 0.63     | 0.40      | 0.63   | 0.49     |
 | **SGD Classifier**| 0.61     | 0.49      | 0.61   | 0.52     |
 
-> ⚠️ **Not:** Modellerin performansını artırmak için daha ileri seviye modeller (XGBoost, LightGBM vb.) kullanılabilir ve hiperparametre optimizasyonu yapılabilir.
+> ⚠️ **Note:** The performance of these models can be improved using advanced methods such as XGBoost, LightGBM, or hyperparameter tuning.
 
 ---
 
-## 🚀 Gelecek Planları
-- XGBoost ve LightGBM gibi ileri seviye algoritmaların eklenmesi.
-- SMOTE yöntemi ile sınıf dengesizliğinin giderilmesi.
-- Hiperparametre optimizasyonu (GridSearchCV, RandomizedSearchCV).
+## 🚀 Future Improvements
+- Implement advanced algorithms like XGBoost and LightGBM.
+- Address class imbalance using SMOTE.
+- Conduct hyperparameter optimization (GridSearchCV, RandomizedSearchCV).
 
 ---
 
-## 📌 Nasıl Kullanılır?
-1. Bu repository'i klonlayın:
+## 📌 How to Use
+1. Clone this repository:
 ```
-git clone https://github.com/kullanici-adiniz/proje-adiniz.git
+git clone https://github.com/your-username/your-repo-name.git
 ```
 
-2. Gerekli kütüphaneleri yükleyin:
+2. Install required libraries:
 ```
 pip install -r requirements.txt
 ```
 
-3. Notebook'u çalıştırmak için:
+3. Run the notebook:
 ```
 jupyter notebook costa-rican.ipynb
 ```
